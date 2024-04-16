@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+        <title>Document</title>
+</head>
+<body>
+    <nav>
+        <h2>PUZZLE PALOOZA CODEATHON </h2>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+        </ul>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="card" >
+         <div class="card-header">
+            Register Form
+         </div>
+         <div class="card-body">
+
+<form action="/auth/register"  method="POST">
+   <div class="form-group">
+     <label for="name">Team Name</label><br>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter name"><br>
+   </div>
+
+  <div class="form-group">
+    <label for="member1">Member Name 1</label>
+    <input type="text" class="form-control" id="member1" name="member1" placeholder="Enter Member name 1">
+  </div>
+  
+  <div class="form-group">
+    <label for="member2">Member Name 2</label>
+    <input type="text" class="form-control" id="member2" name="member2" placeholder="Enter Member name 2">
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter ur phone number">
+  </div>
+<button type="submit" class="btn btn-primary">Register User</button>
+</form>
+    </div>
+  </div>
+  
+   {{#if message }}
+   <h4 class="alert alert-danger mt-4">{{message}}</h4>
+   {{/if}}
+</div>
+
+ </body>
+</html>
